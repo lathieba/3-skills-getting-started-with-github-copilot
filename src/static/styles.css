@@ -88,8 +88,8 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none; /* hide bullets */
+  padding-left: 0;
   margin: 0;
   max-height: 120px;
   overflow-y: auto;
@@ -97,6 +97,10 @@ section h3 {
 
 /* Make list items a bit friendlier */
 .participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   padding: 6px 8px;
   border-radius: 4px;
   background: linear-gradient(180deg, #fff, #fafafa);
@@ -104,6 +108,28 @@ section h3 {
   font-size: 0.95rem;
   color: #222;
   border: 1px solid #f0f0f0;
+}
+
+/* Delete icon/button next to participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828; /* color applied to SVG via currentColor */
+  cursor: pointer;
+  font-size: 1.0rem;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 4px;
+}
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+/* Size the inline SVG icon inside the button */
+.participant-delete svg {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 /* Placeholder when no participants exist */
