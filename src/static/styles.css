@@ -74,6 +74,74 @@ section h3 {
   margin-bottom: 8px;
 }
 
+/* Participants section */
+.participants {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #eee;
+}
+
+.participants-heading {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.participants-list {
+  list-style: none; /* hide bullets */
+  padding-left: 0;
+  margin: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+/* Make list items a bit friendlier */
+.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #fff, #fafafa);
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #222;
+  border: 1px solid #f0f0f0;
+}
+
+/* Delete icon/button next to participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828; /* color applied to SVG via currentColor */
+  cursor: pointer;
+  font-size: 1.0rem;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 4px;
+}
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+/* Size the inline SVG icon inside the button */
+.participant-delete svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Placeholder when no participants exist */
+.no-participants {
+  font-style: italic;
+  color: #666;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
